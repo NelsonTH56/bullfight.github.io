@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'views/home/index_view.dart';
 import 'views/home/newAccount_view.dart';
 import 'views/home/login_view.dart';
+import 'views/home/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginDart(),
+      home: IndexPage(),
     );
   }
 }

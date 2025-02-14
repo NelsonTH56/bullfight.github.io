@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-
+import 'login_view.dart';
+import 'home_view.dart';
 void main() {
   runApp(const FigmaToCodeApp());
 }
@@ -60,50 +61,52 @@ class IndexPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: OutlinedButton(
-                  onPressed: LoginPage, 
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 38, vertical: 449),
-                    ),
-                  
-                  child: 
-                    Container(
-                    child: Text("Login"),
-                    width: 315,
-                    height: 37,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFF039900),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 70,
-                top: 454,
+               
+               Positioned(
+                left: 68,
+                top: 415,
                 child: SizedBox(
                   width: 252,
-                  height: 24,
-                  child: Text(
-                    'Log In',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontFamily: 'Kdam Thmor',
-                      fontWeight: FontWeight.w400,
-                    ),
+                  height: 100, // Increased height to accommodate both text and button
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, // Center the content
+                    crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
+                    children: [
+                      SizedBox(
+                        width: 30, 
+                        height: 10
+                        ), // Space between text and button
+                      ElevatedButton(
+                        onPressed: () {
+                          // Add your button action here (e.g., call a method or navigate)
+                         Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginDart()),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF039900), // Button color
+                          foregroundColor: Colors.white, // Text color
+                          fixedSize: Size(450, 40)
+                        ),
+                        child: Text(
+                          'Sign Up',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400
+                            ),
+                          ),
+                      ),
+                    ],
                   ),
                 ),
               ),
+
+             
               Positioned(
                 left: -3,
-                top: 504,
+                top: 520,
                 child: SizedBox(
                   width: 191,
                   height: 34,
@@ -119,38 +122,52 @@ class IndexPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 36,
-                top: 551,
-                child: Container(
-                  width: 315,
-                  height: 37,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF039900),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                ),
-              ),
+              
               Positioned(
                 left: 68,
-                top: 556,
+                top: 535,
                 child: SizedBox(
                   width: 252,
-                  height: 24,
-                  child: Text(
-                    'Sign Up',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontFamily: 'Kdam Thmor',
-                      fontWeight: FontWeight.w400,
-                    ),
+                  height: 100, // Increased height to accommodate both text and button
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, // Center the content
+                    crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally
+                    children: [
+                      SizedBox(
+                        width: 30, 
+                        height: 10
+                        ), // Space between text and button
+                      ElevatedButton(
+                        
+                        onPressed: () {
+                          // Add your button action here (e.g., call a method or navigate)
+                         Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF039900), // Button color
+                          foregroundColor: Colors.white, // Text color
+                          fixedSize: Size(450, 40), //set width and height of button
+                        ),
+                        child: Text(
+                          'Sign Up',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          )
+                          
+                          ),
+                      ),
+                    ],
                   ),
                 ),
               ),
+
+
+
               Positioned(
                 left: 81,
                 top: 110,

@@ -56,17 +56,29 @@ class LoginDart extends StatelessWidget {
               Positioned(
                 left: 33,
                 top: 416,
-                child: Container(
-                  width: 315,
-                  height: 37,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                    width: 315,
+                    height: 37,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                  ),
+                    ),
+                  ], //children
                 ),
-              ),
+             ),
+
+
+
+
+
+
               Positioned(
                 left: -10,
                 top: 469,
